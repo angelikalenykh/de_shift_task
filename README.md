@@ -67,6 +67,7 @@ ETL-пайплайн для работы с данными о погоде, ра
    # После получения данных фильтруем по нужному диапазону
    filtered_data = data[(data['date'] >= requested_start_date) & 
                      (data['date'] <= requested_end_date)]
+   ```
 Почему именно так?
 - Простота - не нужно сложных преобразований времени
 - Надёжность - гарантированно получаем все нужные данные
@@ -85,11 +86,13 @@ Git
    ```bash
    git clone https://github.com/angelikalenykh/shift_task.git
    cd shift_task
+   ```
    
 3. Запуск базы данных
 
    ```bash
    docker-compose up -d
+   ```
    
 Это запустит PostgreSQL в фоновом режиме
 
@@ -97,16 +100,19 @@ Git
 
    ```bash
    pip install -r requirements.txt
+   ```
    
 Если возникает ошибка, попробуйте:
 
    ```bash
    python -m pip install -r requirements.txt
+   ```
    
 5. Запуск ETL-процесса
 
    ```bash
    python python_etl.py
+   ```
    
 6. Ввод параметров
 Программа попросит указать:
